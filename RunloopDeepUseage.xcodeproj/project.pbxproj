@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		932BF533418DCBCD6D12224F /* libPods-RunloopDeepUseage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CD2DF9EE447AF9E0E40E02 /* libPods-RunloopDeepUseage.a */; };
+		FC8CDE401F87D62F006DE1E8 /* NSThreadOperationPriorityDiscuss.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8CDE3F1F87D62F006DE1E8 /* NSThreadOperationPriorityDiscuss.m */; };
+		FC8CDE451F87D718006DE1E8 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8CDE431F87D718006DE1E8 /* SecondViewController.m */; };
+		FC8CDE461F87D718006DE1E8 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC8CDE441F87D718006DE1E8 /* SecondViewController.xib */; };
 		FC912CEF1F85365300756002 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC912CEE1F85365300756002 /* AppDelegate.m */; };
 		FC912CF21F85365300756002 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC912CF11F85365300756002 /* ViewController.m */; };
 		FC912CF51F85365300756002 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC912CF31F85365300756002 /* Main.storyboard */; };
@@ -15,6 +19,8 @@
 		FC912CFD1F85365300756002 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC912CFC1F85365300756002 /* main.m */; };
 		FC912D071F85365300756002 /* RunloopDeepUseageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC912D061F85365300756002 /* RunloopDeepUseageTests.m */; };
 		FC912D121F85365300756002 /* RunloopDeepUseageUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC912D111F85365300756002 /* RunloopDeepUseageUITests.m */; };
+		FC912D231F8539DB00756002 /* STableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC912D211F8539DB00756002 /* STableViewCell.m */; };
+		FC912D241F8539DB00756002 /* STableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC912D221F8539DB00756002 /* STableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +41,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C5A28FE5C40067A41D1F244 /* Pods-RunloopDeepUseage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunloopDeepUseage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RunloopDeepUseage/Pods-RunloopDeepUseage.debug.xcconfig"; sourceTree = "<group>"; };
+		80948FEADC122E89797C12B3 /* Pods-RunloopDeepUseage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunloopDeepUseage.release.xcconfig"; path = "Pods/Target Support Files/Pods-RunloopDeepUseage/Pods-RunloopDeepUseage.release.xcconfig"; sourceTree = "<group>"; };
+		B1CD2DF9EE447AF9E0E40E02 /* libPods-RunloopDeepUseage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RunloopDeepUseage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC8CDE3E1F87D62F006DE1E8 /* NSThreadOperationPriorityDiscuss.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSThreadOperationPriorityDiscuss.h; sourceTree = "<group>"; };
+		FC8CDE3F1F87D62F006DE1E8 /* NSThreadOperationPriorityDiscuss.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSThreadOperationPriorityDiscuss.m; sourceTree = "<group>"; };
+		FC8CDE421F87D718006DE1E8 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		FC8CDE431F87D718006DE1E8 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		FC8CDE441F87D718006DE1E8 /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 		FC912CEA1F85365300756002 /* RunloopDeepUseage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunloopDeepUseage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC912CED1F85365300756002 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FC912CEE1F85365300756002 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +65,10 @@
 		FC912D0D1F85365300756002 /* RunloopDeepUseageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunloopDeepUseageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC912D111F85365300756002 /* RunloopDeepUseageUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunloopDeepUseageUITests.m; sourceTree = "<group>"; };
 		FC912D131F85365300756002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC912D201F8539DB00756002 /* STableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STableViewCell.h; sourceTree = "<group>"; };
+		FC912D211F8539DB00756002 /* STableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STableViewCell.m; sourceTree = "<group>"; };
+		FC912D221F8539DB00756002 /* STableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = STableViewCell.xib; sourceTree = "<group>"; };
+		FC912D261F853BE400756002 /* const.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = const.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				932BF533418DCBCD6D12224F /* libPods-RunloopDeepUseage.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +97,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		750C344003DE63EB47BE5A4D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1CD2DF9EE447AF9E0E40E02 /* libPods-RunloopDeepUseage.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A76521BA8E23EA84939A598B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2C5A28FE5C40067A41D1F244 /* Pods-RunloopDeepUseage.debug.xcconfig */,
+				80948FEADC122E89797C12B3 /* Pods-RunloopDeepUseage.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FC8CDE411F87D636006DE1E8 /* NSthread */ = {
+			isa = PBXGroup;
+			children = (
+				FC8CDE3E1F87D62F006DE1E8 /* NSThreadOperationPriorityDiscuss.h */,
+				FC8CDE3F1F87D62F006DE1E8 /* NSThreadOperationPriorityDiscuss.m */,
+			);
+			path = NSthread;
+			sourceTree = "<group>";
+		};
 		FC912CE11F85365300756002 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +130,8 @@
 				FC912D051F85365300756002 /* RunloopDeepUseageTests */,
 				FC912D101F85365300756002 /* RunloopDeepUseageUITests */,
 				FC912CEB1F85365300756002 /* Products */,
+				A76521BA8E23EA84939A598B /* Pods */,
+				750C344003DE63EB47BE5A4D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,8 +150,10 @@
 			children = (
 				FC912CED1F85365300756002 /* AppDelegate.h */,
 				FC912CEE1F85365300756002 /* AppDelegate.m */,
-				FC912CF01F85365300756002 /* ViewController.h */,
-				FC912CF11F85365300756002 /* ViewController.m */,
+				FC912D261F853BE400756002 /* const.pch */,
+				FC8CDE411F87D636006DE1E8 /* NSthread */,
+				FC912D251F8539E000756002 /* STableViewCell */,
+				FC912D1F1F8539B200756002 /* Controller */,
 				FC912CF31F85365300756002 /* Main.storyboard */,
 				FC912CF61F85365300756002 /* Assets.xcassets */,
 				FC912CF81F85365300756002 /* LaunchScreen.storyboard */,
@@ -132,6 +181,28 @@
 			path = RunloopDeepUseageUITests;
 			sourceTree = "<group>";
 		};
+		FC912D1F1F8539B200756002 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC912CF01F85365300756002 /* ViewController.h */,
+				FC912CF11F85365300756002 /* ViewController.m */,
+				FC8CDE421F87D718006DE1E8 /* SecondViewController.h */,
+				FC8CDE431F87D718006DE1E8 /* SecondViewController.m */,
+				FC8CDE441F87D718006DE1E8 /* SecondViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FC912D251F8539E000756002 /* STableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FC912D201F8539DB00756002 /* STableViewCell.h */,
+				FC912D211F8539DB00756002 /* STableViewCell.m */,
+				FC912D221F8539DB00756002 /* STableViewCell.xib */,
+			);
+			path = STableViewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +210,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC912D161F85365300756002 /* Build configuration list for PBXNativeTarget "RunloopDeepUseage" */;
 			buildPhases = (
+				254EDDEEFFE74889538A431B /* [CP] Check Pods Manifest.lock */,
 				FC912CE61F85365300756002 /* Sources */,
 				FC912CE71F85365300756002 /* Frameworks */,
 				FC912CE81F85365300756002 /* Resources */,
+				CFAC968EBAEEBE0205C57DC5 /* [CP] Embed Pods Frameworks */,
+				D4C55378BAD0B307E57181F9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -239,8 +313,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC912CFA1F85365300756002 /* LaunchScreen.storyboard in Resources */,
+				FC912D241F8539DB00756002 /* STableViewCell.xib in Resources */,
 				FC912CF71F85365300756002 /* Assets.xcassets in Resources */,
 				FC912CF51F85365300756002 /* Main.storyboard in Resources */,
+				FC8CDE461F87D718006DE1E8 /* SecondViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,12 +336,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		254EDDEEFFE74889538A431B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CFAC968EBAEEBE0205C57DC5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RunloopDeepUseage/Pods-RunloopDeepUseage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4C55378BAD0B307E57181F9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RunloopDeepUseage/Pods-RunloopDeepUseage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FC912CE61F85365300756002 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC8CDE451F87D718006DE1E8 /* SecondViewController.m in Sources */,
 				FC912CF21F85365300756002 /* ViewController.m in Sources */,
+				FC8CDE401F87D62F006DE1E8 /* NSThreadOperationPriorityDiscuss.m in Sources */,
+				FC912D231F8539DB00756002 /* STableViewCell.m in Sources */,
 				FC912CFD1F85365300756002 /* main.m in Sources */,
 				FC912CEF1F85365300756002 /* AppDelegate.m in Sources */,
 			);
@@ -428,11 +555,14 @@
 		};
 		FC912D171F85365300756002 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C5A28FE5C40067A41D1F244 /* Pods-RunloopDeepUseage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ML9NWM8SSX;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/RunloopDeepUseage/const.pch";
 				INFOPLIST_FILE = RunloopDeepUseage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kong.RunloopDeepUseage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -442,11 +572,14 @@
 		};
 		FC912D181F85365300756002 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80948FEADC122E89797C12B3 /* Pods-RunloopDeepUseage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ML9NWM8SSX;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/RunloopDeepUseage/const.pch";
 				INFOPLIST_FILE = RunloopDeepUseage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kong.RunloopDeepUseage;
 				PRODUCT_NAME = "$(TARGET_NAME)";

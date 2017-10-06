@@ -1,0 +1,18 @@
+//
+//  const.pch
+//  RunloopDeepUseage
+//
+//  Created by konglee on 2017/10/4.
+//  Copyright © 2017年 konglee. All rights reserved.
+//
+
+#ifndef const_pch
+#define const_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define KWidth  [UIScreen mainScreen].bounds.size.width
+#define KHeight  [UIScreen mainScreen].bounds.size.height
+
+#endif /* const_pch */
