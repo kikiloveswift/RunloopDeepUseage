@@ -7,33 +7,49 @@
 //
 
 #import "SecondViewController.h"
+#import "RunLoopSource.h"
+#import "RunLoopContext.h"
 
 @interface SecondViewController ()
+{
+    NSMutableArray *sourcesToPing;
+    
+}
 
 @end
 
 @implementation SecondViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
     NSLog(@"secondVC");
-
+    sourcesToPing = [NSMutableArray array];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)registerSource:(RunLoopContext*)sourceInfo;
+{
+    [sourcesToPing addObject:sourceInfo];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)removeSource:(RunLoopContext*)sourceInfo
+{
+    id    objToRemove = nil;
+    
+    for (RunLoopContext* context in sourcesToPing)
+    {
+        if ([context isEqual:sourceInfo])
+        {
+            objToRemove = context;
+            break;
+        }
+    }
+    
+    if (objToRemove)
+        [sourcesToPing removeObject:objToRemove];
 }
-*/
+
+
+
 
 @end
