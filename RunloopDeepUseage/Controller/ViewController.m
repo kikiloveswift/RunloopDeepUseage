@@ -90,9 +90,9 @@ void observerGetStatus(CFRunLoopObserverRef observer, CFRunLoopActivity activity
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [self calloutRunloopStatus];
+//    [self calloutRunloopStatus];
     [self initUI];
-    [[TrackingModeObserver shareInstance] addTrackingOb];
+//    [[TrackingModeObserver shareInstance] addTrackingOb];
 }
 
 
