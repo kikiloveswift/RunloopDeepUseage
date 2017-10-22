@@ -14,18 +14,21 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - PLCrashReporter (1.2.0)
   - SDWebImage (4.1.0):
     - SDWebImage/Core (= 4.1.0)
   - SDWebImage/Core (4.1.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - PLCrashReporter (~> 1.2)
   - SDWebImage (~> 4.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  PLCrashReporter: 16927d86a093d0b9cf110545dacb77cb0ed0f243
   SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
 
-PODFILE CHECKSUM: e816f5a07392c8323aef5502d3811c20e8180a73
+PODFILE CHECKSUM: 5b70760054da2a249f5a51afb4d12e0f3c1598b6
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.4.0.beta.1
