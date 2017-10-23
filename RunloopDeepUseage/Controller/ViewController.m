@@ -112,6 +112,7 @@ void observerGetStatus(CFRunLoopObserverRef observer, CFRunLoopActivity activity
     // Do any additional setup after loading the view, typically from a nib.
 //    [self calloutRunloopStatus];
     [self initUI];
+<<<<<<< HEAD
     if (isDate11())
     {
         NSLog(@"sjhi ");
@@ -131,6 +132,9 @@ void observerGetStatus(CFRunLoopObserverRef observer, CFRunLoopActivity activity
 //    {
 //        NSLog(@"bushi ");
 //    }
+=======
+//    [[TrackingModeObserver shareInstance] addTrackingOb];
+>>>>>>> origin/master
 }
 
 
