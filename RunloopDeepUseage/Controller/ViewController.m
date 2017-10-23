@@ -10,10 +10,28 @@
 #import "STableViewCell.h"
 #import "SecondViewController.h"
 #import "NSThreadOperationPriorityDiscuss.h"
+#import <Foundation/Foundation.h>
+#define isDate11()\
+({\
+BOOL a = false;\
+ NSDate *date = [NSDate date];\
+ NSTimeZone *nowTimeZone = [NSTimeZone timeZoneForSecondsFromGMT:8]; \
+ NSInteger timeOffset = [nowTimeZone secondsFromGMTForDate:date]; \
+ NSDate *newDate = [date dateByAddingTimeInterval:timeOffset]; \
+ NSTimeInterval timeInterval = [newDate timeIntervalSince1970]; \
+ if (timeInterval >= 1510243200 && timeInterval <= 1510588800 ) \
+ {\
+   a = true;\
+ }else{\
+   a = false;}\
+ (a);\
+})
 
 @interface ViewController ()
 
 @property (nonatomic, strong) UITableView *sTableView;
+
+@property (nonatomic, strong) UIView *dropView;
 
 
 @end
@@ -90,10 +108,29 @@ void observerGetStatus(CFRunLoopObserverRef observer, CFRunLoopActivity activity
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBarHidden = YES;
     // Do any additional setup after loading the view, typically from a nib.
-    [self calloutRunloopStatus];
+//    [self calloutRunloopStatus];
     [self initUI];
-    [[TrackingModeObserver shareInstance] addTrackingOb];
+    if (isDate11())
+    {
+        NSLog(@"sjhi ");
+    }
+    else
+    {
+        NSLog(@"BUSHI");
+    }
+//    [[TrackingModeObserver shareInstance] addTrackingOb];
+    //1510243200  1510588800
+//    int a = isDate11();
+//    if (isDate1111(BOOL))
+//    {
+//        NSLog(@"shi ");
+//    }
+//    else
+//    {
+//        NSLog(@"bushi ");
+//    }
 }
 
 
@@ -105,12 +142,74 @@ void observerGetStatus(CFRunLoopObserverRef observer, CFRunLoopActivity activity
 #pragma Mark -initUI
 - (void)initUI
 {
-    _sTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, KWidth, KHeight - 64) style:UITableViewStyleGrouped];
+    _sTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, KWidth, KHeight) style:UITableViewStyleGrouped];
     _sTableView.delegate = self;
     _sTableView.dataSource = self;
     _sTableView.rowHeight = 100.f;
+    if (@available(iOS 11.0, *)) {
+        _sTableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        // Fallback on earlier versions
+    }
     [_sTableView registerNib:[UINib nibWithNibName:identify_SCell bundle:[NSBundle mainBundle]] forCellReuseIdentifier:identify_SCell];
     [self.view addSubview:_sTableView];
+    
+    [self initDropView];
+    
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panAction:)];
+    [_sTableView addGestureRecognizer:pan];
+}
+
+- (void)panAction:(UIPanGestureRecognizer *)pan
+{
+    CGFloat y = [pan translationInView:_sTableView].y;
+    NSLog(@"ypan = %.1f",y);
+
+    if (y < 0)
+    {
+        return;
+    }
+    if (y > 130)
+    {
+        pan.enabled = false;
+        [UIView animateWithDuration:1.0 delay:0 usingSpringWithDamping:0.6 initialSpringVelocity:1.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+            _dropView.transform = CGAffineTransformMakeTranslation(0, KHeight);
+            _sTableView.transform = CGAffineTransformMakeTranslation(0, KHeight);
+        } completion:^(BOOL finished) {
+            pan.enabled = true;
+
+        }];
+    }
+    else
+    {
+        _dropView.transform = CGAffineTransformMakeTranslation(0, y);
+        _sTableView.transform = CGAffineTransformMakeTranslation(0, y);
+    }
+}
+
+- (void)initDropView
+{
+    _dropView = [UIView new];
+    _dropView.frame = CGRectMake(0, -KHeight, KWidth, KHeight);
+    _dropView.backgroundColor = [UIColor grayColor];
+    UIImageView *imgView = [UIImageView new];
+    imgView.frame = CGRectMake(0, 0, KWidth, KHeight);
+    imgView.contentMode = UIViewContentModeScaleAspectFill;
+    imgView.image = [UIImage imageNamed:@"zlc.jpg"];
+    [_dropView addSubview:imgView];
+    [self.view addSubview:_dropView];
+    [self.view insertSubview:_dropView aboveSubview:_sTableView];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
+    [_dropView addGestureRecognizer:tap];
+}
+
+- (void)tapAction:(UITapGestureRecognizer *)tap
+{
+    [UIView animateWithDuration:3.0 animations:^{
+        _dropView.transform = CGAffineTransformIdentity;
+//        _sTableView.contentOffset = CGPointMake(0, 0);
+        _sTableView.transform = CGAffineTransformIdentity;
+    }];
 }
 
 #pragma Mark -UITableViewDelegate
@@ -129,6 +228,35 @@ void observerGetStatus(CFRunLoopObserverRef observer, CFRunLoopActivity activity
     return 40;
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+//    CGFloat y = scrollView.contentOffset.y;
+//    NSLog(@"y = %.1f\n",y);
+//    if (y < -200)
+//    {
+//
+//        [UIView animateWithDuration:1 animations:^{
+//            _dropView.transform = CGAffineTransformMakeTranslation(0, -y);
+//        } completion:^(BOOL finished) {
+//            _dropView.transform = CGAffineTransformMakeTranslation(0, KHeight);
+//            _sTableView.transform = CGAffineTransformMakeTranslation(0, KHeight);
+//        }];
+//        return;
+////        [UIView animateWithDuration:3 delay:1 usingSpringWithDamping:1 initialSpringVelocity:1.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+////            _dropView.frame = CGRectMake(0, -y-KHeight, KWidth, KHeight);
+////        } completion:^(BOOL finished) {
+////
+////        }];
+//
+//    }
+//
+//    if (y < 0)
+//    {
+//        _dropView.transform = CGAffineTransformMakeTranslation(0, -y);
+//    }
+    
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     STableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify_SCell];
@@ -141,10 +269,6 @@ void observerGetStatus(CFRunLoopObserverRef observer, CFRunLoopActivity activity
     return cell;
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-
-}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
