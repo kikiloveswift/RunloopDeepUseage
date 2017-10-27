@@ -12,7 +12,6 @@
 
 - (void)test1
 {
-    dispatch_queue_attr_t
 }
 
 @end

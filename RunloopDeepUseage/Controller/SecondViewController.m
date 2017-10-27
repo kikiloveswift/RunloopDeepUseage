@@ -43,6 +43,7 @@ struct __CFRunLoop {
     [super viewDidLoad];
     NSLog(@"secondVC");
     sourcesToPing = [NSMutableArray array];
+    [self testGCDFeatures];
 }
 
 - (void)registerSource:(RunLoopContext*)sourceInfo;
@@ -99,6 +100,13 @@ struct __CFRunLoop {
     NSLog(@"thread is %@,runloop is ",[NSThread currentThread]);
     CFRunLoopRef runloop_current = [[NSRunLoop currentRunLoop] getCFRunLoop];
 //    NSLog(@"%@",runloop_current -> _commonModes);
+}
+
+- (void)testGCDFeatures
+{
+    id queue1 = @"queue";
+//     DISPATCH_DECL(queue1);
+    
 }
 
 
