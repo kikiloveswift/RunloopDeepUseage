@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		932BF533418DCBCD6D12224F /* libPods-RunloopDeepUseage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CD2DF9EE447AF9E0E40E02 /* libPods-RunloopDeepUseage.a */; };
-		FC664A061F9DDCCA000A0E6E /* GCDTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FC664A051F9DDCCA000A0E6E /* GCDTest.m */; };
 		FC8CDE401F87D62F006DE1E8 /* NSThreadOperationPriorityDiscuss.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8CDE3F1F87D62F006DE1E8 /* NSThreadOperationPriorityDiscuss.m */; };
 		FC8CDE451F87D718006DE1E8 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8CDE431F87D718006DE1E8 /* SecondViewController.m */; };
 		FC8CDE461F87D718006DE1E8 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC8CDE441F87D718006DE1E8 /* SecondViewController.xib */; };
@@ -47,8 +46,6 @@
 		2C5A28FE5C40067A41D1F244 /* Pods-RunloopDeepUseage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunloopDeepUseage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RunloopDeepUseage/Pods-RunloopDeepUseage.debug.xcconfig"; sourceTree = "<group>"; };
 		80948FEADC122E89797C12B3 /* Pods-RunloopDeepUseage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunloopDeepUseage.release.xcconfig"; path = "Pods/Target Support Files/Pods-RunloopDeepUseage/Pods-RunloopDeepUseage.release.xcconfig"; sourceTree = "<group>"; };
 		B1CD2DF9EE447AF9E0E40E02 /* libPods-RunloopDeepUseage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RunloopDeepUseage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC664A041F9DDCCA000A0E6E /* GCDTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDTest.h; sourceTree = "<group>"; };
-		FC664A051F9DDCCA000A0E6E /* GCDTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDTest.m; sourceTree = "<group>"; };
 		FC8CDE3E1F87D62F006DE1E8 /* NSThreadOperationPriorityDiscuss.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSThreadOperationPriorityDiscuss.h; sourceTree = "<group>"; };
 		FC8CDE3F1F87D62F006DE1E8 /* NSThreadOperationPriorityDiscuss.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSThreadOperationPriorityDiscuss.m; sourceTree = "<group>"; };
 		FC8CDE421F87D718006DE1E8 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
@@ -220,8 +217,6 @@
 				FCC2213C1F90560B0085462D /* RunLoopSource.m */,
 				FCC2213F1F905BB90085462D /* RunLoopContext.h */,
 				FCC221401F905BB90085462D /* RunLoopContext.m */,
-				FC664A041F9DDCCA000A0E6E /* GCDTest.h */,
-				FC664A051F9DDCCA000A0E6E /* GCDTest.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -421,7 +416,6 @@
 				FC8CDE401F87D62F006DE1E8 /* NSThreadOperationPriorityDiscuss.m in Sources */,
 				FC912D231F8539DB00756002 /* STableViewCell.m in Sources */,
 				FC912CFD1F85365300756002 /* main.m in Sources */,
-				FC664A061F9DDCCA000A0E6E /* GCDTest.m in Sources */,
 				FC912CEF1F85365300756002 /* AppDelegate.m in Sources */,
 				FCC221411F905BB90085462D /* RunLoopContext.m in Sources */,
 			);
