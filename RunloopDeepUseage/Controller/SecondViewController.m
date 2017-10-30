@@ -9,7 +9,7 @@
 #import "SecondViewController.h"
 #import "RunLoopSource.h"
 #import "RunLoopContext.h"
-
+#import "GCDTest.h"
 
 @interface SecondViewController ()
 {
@@ -43,6 +43,7 @@ struct __CFRunLoop {
     [super viewDidLoad];
     NSLog(@"secondVC");
     sourcesToPing = [NSMutableArray array];
+    [self threadTest];
 }
 
 - (void)registerSource:(RunLoopContext*)sourceInfo;
@@ -99,6 +100,11 @@ struct __CFRunLoop {
     NSLog(@"thread is %@,runloop is ",[NSThread currentThread]);
     CFRunLoopRef runloop_current = [[NSRunLoop currentRunLoop] getCFRunLoop];
 //    NSLog(@"%@",runloop_current -> _commonModes);
+}
+
+- (void)threadTest
+{
+    [[GCDTest shareInstance] test];
 }
 
 

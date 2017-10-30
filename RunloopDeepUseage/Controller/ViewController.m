@@ -108,7 +108,7 @@ void observerGetStatus(CFRunLoopObserverRef observer, CFRunLoopActivity activity
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBarHidden = YES;
+//    self.navigationController.navigationBarHidden = YES;
     // Do any additional setup after loading the view, typically from a nib.
 //    [self calloutRunloopStatus];
     [self initUI];
