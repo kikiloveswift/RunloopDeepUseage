@@ -24,6 +24,7 @@
 		FC912D241F8539DB00756002 /* STableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC912D221F8539DB00756002 /* STableViewCell.xib */; };
 		FCC2213D1F90560B0085462D /* RunLoopSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2213C1F90560B0085462D /* RunLoopSource.m */; };
 		FCC221411F905BB90085462D /* RunLoopContext.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC221401F905BB90085462D /* RunLoopContext.m */; };
+		FCF8B9AE1FA6BAD3003EA032 /* DispatchDepth.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF8B9AD1FA6BAD3003EA032 /* DispatchDepth.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		FCC2213C1F90560B0085462D /* RunLoopSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopSource.m; sourceTree = "<group>"; };
 		FCC2213F1F905BB90085462D /* RunLoopContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopContext.h; sourceTree = "<group>"; };
 		FCC221401F905BB90085462D /* RunLoopContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopContext.m; sourceTree = "<group>"; };
+		FCF8B9AC1FA6BAD3003EA032 /* DispatchDepth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchDepth.h; sourceTree = "<group>"; };
+		FCF8B9AD1FA6BAD3003EA032 /* DispatchDepth.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DispatchDepth.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +225,8 @@
 				FCC221401F905BB90085462D /* RunLoopContext.m */,
 				FC664A041F9DDCCA000A0E6E /* GCDTest.h */,
 				FC664A051F9DDCCA000A0E6E /* GCDTest.m */,
+				FCF8B9AC1FA6BAD3003EA032 /* DispatchDepth.h */,
+				FCF8B9AD1FA6BAD3003EA032 /* DispatchDepth.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -416,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC8CDE451F87D718006DE1E8 /* SecondViewController.m in Sources */,
+				FCF8B9AE1FA6BAD3003EA032 /* DispatchDepth.m in Sources */,
 				FC912CF21F85365300756002 /* ViewController.m in Sources */,
 				FCC2213D1F90560B0085462D /* RunLoopSource.m in Sources */,
 				FC8CDE401F87D62F006DE1E8 /* NSThreadOperationPriorityDiscuss.m in Sources */,

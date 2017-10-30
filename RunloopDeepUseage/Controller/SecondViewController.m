@@ -9,6 +9,7 @@
 #import "SecondViewController.h"
 #import "RunLoopSource.h"
 #import "RunLoopContext.h"
+#import "DispatchDepth.h"
 
 
 @interface SecondViewController ()
@@ -104,9 +105,7 @@ struct __CFRunLoop {
 
 - (void)testGCDFeatures
 {
-    id queue1 = @"queue";
-//     DISPATCH_DECL(queue1);
-    
+    [[DispatchDepth shareDispatch] discussDispatch_S];
 }
 
 
