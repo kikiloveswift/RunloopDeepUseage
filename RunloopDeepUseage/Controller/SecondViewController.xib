@@ -40,12 +40,27 @@
                         <action selector="startAction:" destination="-1" eventType="touchUpInside" id="fd3-QS-NJ6"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFH-gi-JbZ">
+                    <rect key="frame" x="25" y="198" width="150" height="57"/>
+                    <color key="backgroundColor" red="0.99215686270000003" green="0.52941176469999995" blue="0.59999999999999998" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="FE7-aF-pXY"/>
+                        <constraint firstAttribute="height" constant="57" id="PVB-wF-46L"/>
+                    </constraints>
+                    <state key="normal" title="取消多线程"/>
+                    <connections>
+                        <action selector="cancelMutableThread:" destination="-1" eventType="touchUpInside" id="5mC-ge-iCb"/>
+                        <action selector="startAction:" destination="-1" eventType="touchUpInside" id="YwZ-22-Han"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="AFH-gi-JbZ" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="25" id="2Kl-mI-qVV"/>
                 <constraint firstItem="dsZ-sa-eOc" firstAttribute="height" secondItem="YV3-rE-rJH" secondAttribute="height" id="3Z5-le-xLA"/>
                 <constraint firstItem="YV3-rE-rJH" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="25" id="6h6-SW-4Ug"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="dsZ-sa-eOc" secondAttribute="trailing" constant="22" id="Feo-3S-n8C"/>
+                <constraint firstItem="YV3-rE-rJH" firstAttribute="top" secondItem="AFH-gi-JbZ" secondAttribute="bottom" constant="50" id="PrL-Bg-R9s"/>
                 <constraint firstItem="dsZ-sa-eOc" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="bwD-ip-cvx"/>
                 <constraint firstItem="YV3-rE-rJH" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="qhG-mi-K1R"/>
                 <constraint firstItem="dsZ-sa-eOc" firstAttribute="width" secondItem="YV3-rE-rJH" secondAttribute="width" id="yA0-2A-WKJ"/>

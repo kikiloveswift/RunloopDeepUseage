@@ -13,5 +13,7 @@
 
 - (void)test;
 
+- (void)cancelTest;
+
 
 @end

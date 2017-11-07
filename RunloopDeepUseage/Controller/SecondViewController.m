@@ -53,7 +53,7 @@ struct __CFRunLoop {
 
 - (void)removeSource:(RunLoopContext*)sourceInfo
 {
-    id    objToRemove = nil;
+    id objToRemove = nil;
     
     for (RunLoopContext* context in sourcesToPing)
     {
@@ -100,6 +100,10 @@ struct __CFRunLoop {
     NSLog(@"thread is %@,runloop is ",[NSThread currentThread]);
     CFRunLoopRef runloop_current = [[NSRunLoop currentRunLoop] getCFRunLoop];
 //    NSLog(@"%@",runloop_current -> _commonModes);
+}
+- (IBAction)cancelMutableThread:(id)sender
+{
+    [[GCDTest shareInstance] cancelTest];
 }
 
 - (void)threadTest

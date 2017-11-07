@@ -11,6 +11,7 @@
 
 @implementation GCDTest
 
+
 static GCDTest *_gcdTest = nil;
 
 + (instancetype)shareInstance
@@ -23,17 +24,26 @@ static GCDTest *_gcdTest = nil;
 }
 
 
+
 /**
  测试线程
  */
 - (void)test
 {
-    void (^myBlock)(void) = ^(){
-        printf("%d block -1\n",(int)pthread_self());
-    };
-    dispatch_queue_t q = dispatch_queue_create("com.kong.thread", DISPATCH_QUEUE_CONCURRENT);
-    dispatch_group_t group = dispatch_group_create();
-    dispatch_group_async(group, q, myBlock);
-    dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
+//    @autoreleasepool
+//    {
+        void (^myBlock)(void) = ^(){
+            printf("%d block\n",(int)pthread_self());
+        };
+        dispatch_queue_t q = dispatch_queue_create("com.kong.thread", DISPATCH_QUEUE_CONCURRENT);
+        dispatch_group_t group = dispatch_group_create();
+        dispatch_group_async(group, q, myBlock);
+        dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
+//    }
+}
+
+- (void)cancelTest
+{
+    NSLog(@"break");
 }
 @end
