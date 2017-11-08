@@ -50,7 +50,6 @@
                     <state key="normal" title="取消多线程"/>
                     <connections>
                         <action selector="cancelMutableThread:" destination="-1" eventType="touchUpInside" id="5mC-ge-iCb"/>
-                        <action selector="startAction:" destination="-1" eventType="touchUpInside" id="YwZ-22-Han"/>
                     </connections>
                 </button>
             </subviews>

@@ -43,7 +43,7 @@ struct __CFRunLoop {
     [super viewDidLoad];
     NSLog(@"secondVC");
     sourcesToPing = [NSMutableArray array];
-    [self threadTest];
+//    [self threadTest];
 }
 
 - (void)registerSource:(RunLoopContext*)sourceInfo;

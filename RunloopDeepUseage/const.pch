@@ -15,4 +15,8 @@
 #define KWidth  [UIScreen mainScreen].bounds.size.width
 #define KHeight  [UIScreen mainScreen].bounds.size.height
 
+/************Define**********/
+#import "AFNetReqCls.h"
+#import "NSString+MD5.h"
+
 #endif /* const_pch */

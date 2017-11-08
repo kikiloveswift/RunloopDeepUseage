@@ -45,5 +45,57 @@ static GCDTest *_gcdTest = nil;
 - (void)cancelTest
 {
     NSLog(@"break");
+    [self reqestAPI];
 }
+
+- (void)reqestAPI
+{
+    NSString *urlStr1 = @"http://m.ctrip.com/restapi/soa2/10290/abtest.json";
+    NSDictionary *params1 = @{
+                              @"head": @{
+                                  @"ctok": @"",
+                                  @"cid": @"12001017710037836450",
+                                  @"lang": @"01",
+                                  @"syscode": @"12",
+                                  @"sauth": @"",
+                                  @"extension": @"",
+                                  @"sid": @"8890",
+                                  @"auth": @"",
+                                  @"cver": @"702.000"
+                              },
+                              @"ClientID": @"12001017710037836450",
+                              @"ExpCodes": @""
+                              };
+    
+    dispatch_group_t group = dispatch_group_create();
+    
+    //开启10个子线程请求
+    for (int i = 1; i <= 10; i ++)
+    {
+        dispatch_group_async(group, dispatch_get_global_queue(0, 0), ^{
+            dispatch_group_enter(group);
+            [AFNetReqCls requestURL:urlStr1 Method:MethodPOST Params:params1 HeaderParams:nil Successs:^(id obj) {
+                NSLog(@"第%d done",i);
+                dispatch_group_leave(group);
+            } Failure:^(id obj) {
+                dispatch_group_leave(group);
+            }];
+        });
+    }
+    
+    //开启单独一个
+    dispatch_group_async(group, dispatch_get_global_queue(0, 0), ^{
+        dispatch_group_enter(group);
+        [AFNetReqCls requestURL:urlStr1 Method:MethodPOST Params:params1 HeaderParams:nil Successs:^(id obj) {
+            NSLog(@"another done");
+            dispatch_group_leave(group);
+        } Failure:^(id obj) {
+            dispatch_group_leave(group);
+        }];
+    });
+    dispatch_group_notify(group, dispatch_get_global_queue(0, 0), ^{
+        NSLog(@"All done");
+    });
+}
+
 @end
