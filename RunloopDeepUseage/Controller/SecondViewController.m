@@ -10,6 +10,7 @@
 #import "RunLoopSource.h"
 #import "RunLoopContext.h"
 #import "GCDTest.h"
+#import "ThirdTableViewController.h"
 
 @interface SecondViewController ()
 {
@@ -109,6 +110,11 @@ struct __CFRunLoop {
 - (void)threadTest
 {
     [[GCDTest shareInstance] test];
+}
+- (IBAction)pthreadTest:(id)sender
+{
+    ThirdTableViewController *thVC = [ThirdTableViewController new];
+    [self.navigationController pushViewController:thVC animated:YES];
 }
 
 

@@ -26,6 +26,8 @@
 		FCB9E2D31FA75FCA00BBD2F6 /* GCDTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB9E2D21FA75FCA00BBD2F6 /* GCDTest.m */; };
 		FCC2213D1F90560B0085462D /* RunLoopSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2213C1F90560B0085462D /* RunLoopSource.m */; };
 		FCC221411F905BB90085462D /* RunLoopContext.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC221401F905BB90085462D /* RunLoopContext.m */; };
+		FCE1AFC41FB54192002E2F20 /* ThirdTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE1AFC21FB54192002E2F20 /* ThirdTableViewController.m */; };
+		FCE1AFC51FB54192002E2F20 /* ThirdTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE1AFC31FB54192002E2F20 /* ThirdTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,9 @@
 		FCC2213C1F90560B0085462D /* RunLoopSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopSource.m; sourceTree = "<group>"; };
 		FCC2213F1F905BB90085462D /* RunLoopContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopContext.h; sourceTree = "<group>"; };
 		FCC221401F905BB90085462D /* RunLoopContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopContext.m; sourceTree = "<group>"; };
+		FCE1AFC11FB54192002E2F20 /* ThirdTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdTableViewController.h; sourceTree = "<group>"; };
+		FCE1AFC21FB54192002E2F20 /* ThirdTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdTableViewController.m; sourceTree = "<group>"; };
+		FCE1AFC31FB54192002E2F20 /* ThirdTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +210,9 @@
 				FC8CDE421F87D718006DE1E8 /* SecondViewController.h */,
 				FCB9E2CB1FA75E1F00BBD2F6 /* SecondViewController.m */,
 				FC8CDE441F87D718006DE1E8 /* SecondViewController.xib */,
+				FCE1AFC11FB54192002E2F20 /* ThirdTableViewController.h */,
+				FCE1AFC21FB54192002E2F20 /* ThirdTableViewController.m */,
+				FCE1AFC31FB54192002E2F20 /* ThirdTableViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -348,6 +356,7 @@
 				FC912CFA1F85365300756002 /* LaunchScreen.storyboard in Resources */,
 				FC912D241F8539DB00756002 /* STableViewCell.xib in Resources */,
 				FC912CF71F85365300756002 /* Assets.xcassets in Resources */,
+				FCE1AFC51FB54192002E2F20 /* ThirdTableViewController.xib in Resources */,
 				FC912CF51F85365300756002 /* Main.storyboard in Resources */,
 				FC8CDE461F87D718006DE1E8 /* SecondViewController.xib in Resources */,
 			);
@@ -432,6 +441,7 @@
 				FC4A1B0E1FB2F32500C4D6F2 /* NSString+MD5.m in Sources */,
 				FC4A1B0B1FB2CD3600C4D6F2 /* AFNetReqCls.m in Sources */,
 				FC912D231F8539DB00756002 /* STableViewCell.m in Sources */,
+				FCE1AFC41FB54192002E2F20 /* ThirdTableViewController.m in Sources */,
 				FC912CFD1F85365300756002 /* main.m in Sources */,
 				FCB9E2D31FA75FCA00BBD2F6 /* GCDTest.m in Sources */,
 				FC912CEF1F85365300756002 /* AppDelegate.m in Sources */,
