@@ -10,12 +10,16 @@
 #import <pthread.h>
 
 @interface ThirdTableViewController ()<UITableViewDelegate, UITableViewDataSource>
+{
+    void(^Block)(void);
+}
 
 @property (nonatomic, strong) UITableView *sTableView;
 
 @property (nonatomic, copy) NSArray *dataArr;
 
 @property (nonatomic, assign) NSInteger selectedIndex;
+
 
 @end
 
@@ -33,6 +37,7 @@ static  NSString *identify = @"PthreadCell";
     [super viewDidLoad];
     [self configSetting];
     [self configUI];
+    
 }
 
 
@@ -40,7 +45,7 @@ static  NSString *identify = @"PthreadCell";
 {
     self.title = @"Pthread";
     _selectedIndex = NSNotFound;
-    _dataArr = @[@"Pthread简单使用"];
+    _dataArr = @[@"Pthread简单使用",@"dispatch_asyn"];
 }
 - (void)configUI
 {
@@ -88,7 +93,11 @@ static  NSString *identify = @"PthreadCell";
             [self testPthread0];
         }
             break;
-            
+        case 1:
+        {
+            [self testAsyn];
+        }
+            break;
         default:
             break;
     }
@@ -119,7 +128,18 @@ void *PrintThreadName(void *threadID)
             printf("ERROR THREAD CREAT %d\n",rc);
         }
     }
-    pthread_exit(NULL);
+}
+
+//GCD dispatch_asyn
+- (void)testAsyn
+{
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        for (NSInteger i = 0; i < 5; i ++)
+        {
+            NSLog(@"Current dispatch Thread is %@",[NSThread currentThread]);
+        }
+    });
+    
 }
 
 - (void)didReceiveMemoryWarning {
